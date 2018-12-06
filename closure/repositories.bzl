@@ -693,7 +693,7 @@ def com_google_protobuf_js():
             "https://github.com/protocolbuffers/protobuf/archive/v3.6.1.2.tar.gz",
         ],
         sha256 = "2244b0308846bb22b4ff0bcc675e99290ff9f1115553ae9671eba1030af31bc0",
-        strip_prefix = "protobuf-7b28271a61a3da0a37f6fda399b0c4c86464e5b3/js",
+        strip_prefix = "protobuf-3.6.1.2/js",
         build_file = str(Label("//closure/protobuf:protobuf_js.BUILD")),
     )
 
