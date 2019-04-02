@@ -3,8 +3,21 @@ workspace(name = "io_bazel_rules_closure")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("//closure/private:java_import_external.bzl", "java_import_external")
 load("//closure:repositories.bzl", "closure_repositories")
+load("//closure:defs.bzl", "filegroup_external")
 
 closure_repositories()
+
+
+filegroup_external(
+    name = "org_python_license",
+    licenses = ["notice"],  # Python 2.0
+    sha256_urls = {
+        "7ca8f169368827781684f7f20876d17b4415bbc5cb28baa4ca4652f0dda05e9f": [
+            "https://mirror.bazel.build/docs.python.org/2.7/_sources/license.rst.txt",
+            "https://docs.python.org/2.7/_sources/license.rst.txt",
+            ],
+        },
+)
 
 http_archive(
     name = "net_zlib",

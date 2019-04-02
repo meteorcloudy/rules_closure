@@ -80,9 +80,9 @@ def _filegroup_external(ctx):
         lines.append("        ],")
         lines.append("    ),")
     else:
-        lines.append("    srcs = %s," % _repr_list(srcs))
+        lines.append("    srcs = %s," % _repr_list(srcs.to_list()))
     if data:
-        lines.append("    data = %s," % _repr_list(data))
+        lines.append("    data = %s," % _repr_list(data.to_list()))
     if ctx.attr.path:
         lines.append("    path = %s," % repr(ctx.attr.path))
     if ctx.attr.visibility:
